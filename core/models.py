@@ -1,14 +1,26 @@
 from django.db import models
 
-class Question(models.Model):
-   question = models.CharField(max_length=200)
-   pub_date = models.DateField('data publicada')
+class Label(models.Model):
+    name = models.CharField("Name", max_length=50)
+
+    def _str_(self):
+        return self.name
 
 class Disco(models.Model):
-    Nome = models.CharField(max_length=200)
-    Descrição = models.CharField(max_length=800)
-    Selo_fonográfico = models.CharField(max_length=200)
-    Ano = models.IntegerField()
-    Pais = models.CharField(max_length=20)
-    Genero = models.CharField(max_length=20)
-    Quantidade = models.IntegerField()
+    name = models.CharField("Nome", max_length=50)
+    description = models.TextField("Descrição", max_length=400)
+    selo_fonografico = models.ForeignKey(Label, on_delete=models.CASCADE)
+    year = models.PositiveIntegerField("Ano", default=2023)
+    country = models.CharField("País", max_length=100)
+    gender = models.CharField("Genero", max_length=50)
+    qtd = models.PositiveIntegerField("Quantidade", default=0)
+
+    def _str_(self):
+        return self.name
+
+class Artist(models.Model):
+    name = models.CharField("Nome", max_length=50)
+    disc = models.ManyToManyField(Disco)
+
+    def _str_(self):
+        return self.name
