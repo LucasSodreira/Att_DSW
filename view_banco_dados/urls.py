@@ -20,7 +20,7 @@ from django.contrib import admin
 from core import views
 
 urlpatterns = [
-    path('', views.index, name="index"),
     path('admin/', admin.site.urls),
-    path('autor/<str:autor_nome>/', views.livros_por_autor, name='livros_por_autor'),
+    path('', views.lista_discos, name='lista_discos'),
+    path('disco/<int:disco_id>/', views.detalhes_disco, name='detalhes_disco'),
 ]

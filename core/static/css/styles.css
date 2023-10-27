@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.discos-list {
+    list-style: none;
+    padding: 0;
+}
+
+.discos-list li {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para a página de detalhes */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.detalhes-disco {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detalhes-disco p {
+    margin: 10px 0;
+}
+
+strong {
+    font-weight: bold;
+    color: #333;
+}

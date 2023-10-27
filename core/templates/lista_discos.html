@@ -1,0 +1,15 @@
+{% load static %}
+{% block main %}
+  <title>Lista de Discos</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+  <body>
+    <h1>Lista de Discos</h1>
+    <ul class="discos-list">
+      {% for disco in discos %}
+        <li>
+          <a href="{% url 'detalhes_disco' disco.id %}">{{ disco.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+{% endblock %}

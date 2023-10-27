@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from .models import Question, Choice, Livro
+from .models import *
 
 # Register your models here.
 
 admin.site.register(Question)
 admin.site.register(Choice)
-admin.site.register(Livro)
+admin.site.register(Disco)

@@ -1,0 +1,28 @@
+{% load static %}
+
+{% block main %}
+  <title>Detalhes do Disco</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+
+  <body>
+    <h1>Detalhes do Disco - {{ disco.name }}</h1>
+    <p>
+      <strong>Nome:</strong> {{ disco.name }}
+    </p>
+    <p>
+      <strong>Descrição:</strong> {{ disco.description }}
+    </p>
+    <p>
+      <strong>Ano de Lançamento:</strong> {{ disco.year }}
+    </p>
+    <p>
+      <strong>País:</strong> {{ disco.country }}
+    </p>
+    <p>
+      <strong>Gênero:</strong> {{ disco.gender }}
+    </p>
+    <p>
+      <strong>Quantidade:</strong> {{ disco.qtd }}
+    </p>
+  </body>
+{% endblock %}
