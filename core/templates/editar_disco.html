@@ -1,0 +1,6 @@
+<h1>Editar Disco - {{ disco.titulo }}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar Alterações</button>
+</form>

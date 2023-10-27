@@ -23,4 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.lista_discos, name='lista_discos'),
     path('disco/<int:disco_id>/', views.detalhes_disco, name='detalhes_disco'),
+    path('cadastrar-disco/', views.cadastrar_disco, name='cadastrar_disco'),
+    path('editar-disco/<int:disco_id>/', views.editar_disco, name='editar_disco'),
+    path('excluir-disco/<int:disco_id>/', views.excluir_disco, name='excluir_disco'),
 ]

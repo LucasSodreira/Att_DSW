@@ -9,6 +9,21 @@ h1 {
     color: #333;
 }
 
+.button-cadastro{
+    background-color: #002aff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#link-cadastro{
+    color: #fff;
+}
+
 .discos-list {
     list-style: none;
     padding: 0;
